@@ -12,9 +12,12 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 // Import other React Component
-import CreateClient from "./Components/create-user.component";
+import CreateUser from "./Components/create-user.component";
 import EditClient from "./Components/edit-user.component";
 import ClientList from "./Components/user-list.component";
+import EnviarAlerta from "./Components/create-alert.component"
+import AmbAlerta from "./Components/ alertas-ambulancia.components"
+
 
 // App Component
 const App = () => {
@@ -46,9 +49,14 @@ const App = () => {
                   </Link>
                 </Nav>
                 <Nav>
-                  <Link to={"/client-list"} 
+                  <Link to={"/create-alert"} 
                     className="nav-link">
                     Send Alert
+                  </Link>
+                </Nav>
+                <Nav>
+                  <Link to={"/alertas-ambulancia"} 
+                    className="nav-link">
                   </Link>
                 </Nav>
               </Nav>
@@ -62,9 +70,12 @@ const App = () => {
               <div className="wrapper">
                 <Switch>
                   <Route exact path="/" component={ClientList} />
-                  <Route path="/create-client" component={CreateClient} />
+                  <Route path="/create-client" component={CreateUser} />
                   <Route path="/edit-client/:id" component={EditClient} />
                   <Route path="/client-list" component={ClientList} />
+                  <Route path="/create-alert" component={EnviarAlerta} />
+                  <Route path="/alerta-ambulancia" component={AmbAlerta} />
+
                 </Switch>
               </div>
             </Col>

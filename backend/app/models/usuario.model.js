@@ -13,20 +13,20 @@ module.exports = (sequelize, Sequelize) => {
       email: {
         type: Sequelize.STRING
       },
-      telefono: {
-        type: Sequelize.INTEGER
+      password: {
+        type: Sequelize.STRING
       },
       edad: {
         type: Sequelize.INTEGER
       },
-      password: {
+      telefono: {
         type: Sequelize.INTEGER
       },
       RUT: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       estado: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       }
     });
     return usuario;
